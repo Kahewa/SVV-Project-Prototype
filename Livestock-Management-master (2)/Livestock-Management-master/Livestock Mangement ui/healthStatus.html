@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestock Management App - Health Status</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .animal-card {
+      margin-bottom: 20px;
+      border: 2px solid #2f1b12;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    .health-status {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .note-button {
+      margin-top: 10px;
+      background-color: #ccac8c;
+      border-color: #2f1b12;
+    }
+  
+      body {
+            background-image: url("images/Namibian-Livestock.jpg");
+            height: 100vh; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h2 {
+          color: white;
+          font-weight: 700;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          font-weight: bolder;
+        }
+        .animal-card{
+          background-color:  rgba(0, 0, 0, 0.5);
+        }
+        .btn-primary {
+  background-color: black;
+  border: none;
+}
+</style>
+</head>
+<body>
+  <a href="mainDashboard.html" class="btn btn-primary home-button">Home Page</a>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center mb-4">Health Status</h2>
+      <!-- Search Bar -->
+      <div class="form-group">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search for tag number...">
+      </div>
+
+      <!-- Sample Animal Cards (Replace with dynamic data) -->
+      <div class="animal-card">
+        <h4 class="health-status">Healthy</h4>
+        <a href="healthyAnimals.html" class="btn btn-primary note-button">View</a>
+        <button class="btn btn-primary note-button" data-toggle="modal" data-target="#noteModal">Add Animal</button>
+        
+      </div>
+      <div class="animal-card">
+        <h4 class="health-status">Sick</h4>
+        <a href="sickAnimals.html" class="btn btn-primary note-button">View</a>
+        <button class="btn btn-primary note-button" data-toggle="modal" data-target="#noteModal">Add Animal</button>
+      </div>
+      <div class="animal-card">
+        <h4 class="health-status">Injured</h4>
+        <a href="injuredAnimals.html" class="btn btn-primary note-button">View</a>
+        <button class="btn btn-primary note-button" data-toggle="modal" data-target="#noteModal">Add Animal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Note Modal -->
+<div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noteModalLabel">Add Animal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="note">Condition Details:</label>
+          <textarea class="form-control" id="note" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save Animal Status</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#searchInput').on('keyup', function() {
+      var searchText = $(this).val().toLowerCase();
+      $('.animal-card').each(function() {
+        var animalName = $(this).data('animal').toLowerCase();
+        if (animalName.indexOf(searchText) === -1) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

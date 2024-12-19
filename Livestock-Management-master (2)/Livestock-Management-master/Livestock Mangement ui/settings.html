@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestock Management App - Settings</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<style>
+      body {
+            background-image: url("images/brown.jpeg");
+            height: 100vh; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h2 {
+          color: black;
+          font-weight: 700;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-primary {
+  background-color: black;
+  border: none;
+
+}
+</style>
+<body>
+  <a href="mainDashboard.html" class="btn btn-primary home-button">Home Page</a>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center mb-4">Settings</h2>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Font Size</h5>
+          <div class="form-group">
+            <label for="fontSize">Adjust font size:</label>
+            <input type="range" class="form-control-range" id="fontSize">
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Language Preferences</h5>
+          <div class="form-group">
+            <label for="language">Select preferred language:</label>
+            <select class="form-control" id="language">
+              <option>English</option>
+              <option>Wamboe</option>
+              <option>Rukwangali</option>
+              <option>Herero</option>
+              <option>Afrikaans</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Notification Settings</h5>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="enableNotifications">
+            <label class="form-check-label" for="enableNotifications">Enable notifications</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

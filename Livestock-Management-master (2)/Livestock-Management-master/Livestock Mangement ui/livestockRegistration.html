@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestock Management App - Livestock Registration</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+  body {
+        background-image: url("images/5a02706b6eee976b924da467670eed6e.jpg");
+        height: 100vh; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h2 {
+      color: black;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .btn-primary{
+      background-color:#844421;
+      border-color: white ;
+    }
+    .form-group{
+      font-weight: bold;
+    }
+    .btn-primary {
+  background-color: black;
+  border: none;
+}
+</style>
+
+<body>
+  <a href="mainDashboard.html" class="btn btn-primary home-button">Home Page</a>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center mb-4">Livestock Registration</h2>
+      <form>
+        <div class="form-group">
+          <label for="tag details">Tag Number</label>
+          <input type="text" class="form-control" id="tag detail" placeholder="Enter tag number on livestock" required>
+        </div>
+        <div class="form-group">
+          <label for="tystyle="background-color: rgb(207, 108, 108);"pe">Type</label>
+          <input type="text" class="form-control" id="type" placeholder="Enter type of livestock" required>
+        </div>
+        <div class="form-group">
+          <label for="color">Color</label>
+          <input type="text" class="form-control" id="color" placeholder="Enter color of livestock" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" placeholder="Enter age of livestock (in months)" required>
+        </div>
+        <div class="form-group">
+          <label for="markings">Notable Markings</label>
+          <textarea class="form-control" id="markings" rows="3" placeholder="Enter any notable markings of the livestock"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
